@@ -1,6 +1,4 @@
-OSG Cookbook 源码
-
-# Common 文件夹
+# OSG Cookbook 笔记
 ----------------------------------------------------
 [通用详细内容](/common/README.md)
 * Common
