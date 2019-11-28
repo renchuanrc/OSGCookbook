@@ -78,6 +78,7 @@ void Compass::traverse(osg::NodeVisitor& nv)
 		osg::Matrix matrix = _mainCamera->getViewMatrix();
 		matrix.setTrans(osg::Vec3());
 
+		// 北极向量
 		osg::Vec3 northVec = osg::Z_AXIS * matrix;
 		northVec.z() = 0.0f;
 		northVec.normalize();

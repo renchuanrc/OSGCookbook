@@ -30,7 +30,9 @@
 
 int main(int argc, char** argv)
 {
-	osg::ref_ptr<osg::Node> scene = osgDB::readNodeFile("cessna.osg");
+	osg::ArgumentParser arguments(&argc, argv);
+	osg::ref_ptr<osg::Node> scene = osgDB::readNodeFiles(arguments);
+	if (!scene) scene = osgDB::readNodeFile("cessna.osg");
 
 	float z = -10.0f;
 	osg::ref_ptr<osg::MatrixTransform> reverse = new osg::MatrixTransform;
@@ -52,8 +54,6 @@ int main(int argc, char** argv)
 	root->addChild(clipNode.get());
 
 	osgViewer::Viewer viewer;
-	viewer.setUpViewInWindow(50, 50, 800, 600);
 	viewer.setSceneData(root.get());
-
 	return viewer.run();
 }

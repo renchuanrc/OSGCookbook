@@ -51,6 +51,7 @@ public:
 
 void BFSPrintVisitor::apply(osg::Node& node)
 {
+	// 处理部分
 	std::cout << node.libraryName() << "::" << node.className() << std::endl;
 	traverseBFS(node);
 }
