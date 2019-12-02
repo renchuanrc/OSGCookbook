@@ -7,7 +7,6 @@
 * PickHandler
 	- osgGA::GUIEventHandler 派生事件处理器 addEventHandler
 
-
 [第2章详细内容](/OSGCh02/README.md)
 * OSGCh02Ex01 左键点击删除可绘制对象
 * OSGCh02Ex02 演示两种拷贝效果(浅拷贝深拷贝)
@@ -18,3 +17,6 @@
 * OSGCh02Ex07 绘制背景图像
 * OSGCh02Ex08 始终朝向屏幕
 * OSGCh02Ex10 指南针
+
+[第3章详细内容](/OSGCh03/README.md)
+* OSGCh03Ex01 分形化一个凹多边形
