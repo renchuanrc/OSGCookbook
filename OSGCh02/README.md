@@ -16,9 +16,11 @@
 
 # OSGCh02Ex03
 * 演示一个围绕盒如何随物体运动而变化
+* osg::ComputeBoundsVisitor 计算一个节点的围绕盒
 * osg::NodePath 节点路径
 * osg::computeLocalToWorld(node->getParent(0)->getParentalNodePaths()[0]) 获取本地到世界的矩阵
 * osg::BoundingBox::expandBy 扩展围绕盒
+* 这里是矩阵右乘
 * 在回调中使用缩放也是一种更新几何体的办法
 * osg::MatrixTransform 设置动画路径回调, 动画路径回调设置动画路径, 动画路径则为列表, 每个列表为元素为时间与位置方位的组合
 
@@ -34,6 +36,7 @@
 * 使用 clipNode 和 clipPlane 裁剪物体
 * osg::MatrixTransform --- 矩阵变换
 	- preMult: 在父坐标系中进行变换, 倒序乘以矩阵
+	- postMult 和上面的代码在程序里面无甚区别
 * osg::ClipNode
 	- addClipPlane: 添加一个裁剪平面
 	- addChild: 添加一个子节点,会应用裁剪平面
@@ -45,6 +48,7 @@
 
 # OSGCh02Ex07
 * 设置背景图像
+* osg::createTexturedQuadGeometry 创建带纹理的四边形
 * 创建一个HUD(2纬正交)相机绘制一个四边形,
 * 关键是背景四边形节点设置属性 osg::Depth(osg::Depth::LEQUAL, 1.0, 1.0)
 
